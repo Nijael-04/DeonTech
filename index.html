@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="DeonTech Magazine · Revista y Blog Editorial de Ética, Sociedad y Futuro Tecnológico. Ensayos sobre inteligencia artificial, bioética, axiología económica y justicia distributiva en el Perú.">
+  <meta name="author" content="Equipo Editorial DeonTech · UCSUR">
+  <title>DeonTech Magazine · Ética, Tecnología y Sociedad</title>
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f97316' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='12 2 2 7 12 12 22 7 12 2'/><polyline points='2 17 12 22 22 17'/><polyline points='2 12 12 17 22 12'/></svg>">
+
+  <!-- Google Fonts Preconnect (Modern Sans-Serif: Outfit y Plus Jakarta Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css?v=4">
+</head>
+
+<body>
+
+
+  <!-- Magazine Masthead Header -->
+  <header class="magazine-masthead">
+    <div class="container">
+      <div class="masthead-main">
+        <a href="#inicio" class="magazine-brand" title="DeonTech Magazine - Portada">
+          <div class="magazine-logo-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2" />
+              <polyline points="2 17 12 22 22 17" />
+              <polyline points="2 12 12 17 22 12" />
+            </svg>
+          </div>
+          <div class="magazine-titles">
+            <div class="magazine-name">DEON<span>TECH</span></div>
+            <div class="magazine-tagline">Revista y Blog de Ética, Sociedad y Futuro Tecnológico</div>
+          </div>
+        </a>
+
+        <nav class="masthead-reader-nav" aria-label="Navegación del lector">
+          <a href="#articulos" class="reader-nav-link">Artículos</a>
+          <a href="#autores" class="reader-nav-link">Equipo Editorial</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="inicio">
+    <!-- Featured Lead Story (Artículo de Portada) -->
+    <section class="lead-story-section">
+      <div class="container">
+        <article class="lead-story-card">
+          <div class="lead-story-grid">
+            <div class="lead-story-content">
+              <div class="lead-story-badge-wrap">
+                <span class="editorial-badge">★ Ensayo de Portada</span>
+                <span class="lead-story-meta">Filosofía Práctica y Telos</span>
+              </div>
+
+              <h1 class="lead-story-title">
+                <a href="javascript:void(0)" onclick="openArticleReader('ac1')">
+                  Robot Salvaje y el telos tecnológico: ¿Hacia una convivencia armónica con la vida?
+                </a>
+              </h1>
+
+              <p class="lead-story-excerpt">
+                En pleno siglo XXI, cuando la aceleración productivista amenaza con subordinar la biosfera al lucro
+                financiero, exploramos cómo la ingeniería, la agronomía y los negocios pueden redescubrir su
+                <em>telos</em> superior: preservar la dignidad humana y cuidar los ecosistemas en el Perú.
+              </p>
+
+              <div class="lead-story-author-bar">
+                <div class="author-chip">
+                  <div class="author-chip-avatar">DT</div>
+                  <div>
+                    <div class="author-chip-name">Por Diego Esquivel y Colectivo DeonTech</div>
+                    <div class="author-chip-role">Software, Sistemas, Agro y Economía · UCSUR</div>
+                  </div>
+                </div>
+
+                <button class="btn btn-primary" onclick="openArticleReader('ac1')">
+                  <span>Leer Ensayo Completo</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="lead-story-media">
+              <img src="assets/img/ac1-metafora-robot-salvaje.jpg" alt="Metáfora Artística DeonTech - Robot Salvaje">
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 2-Column Blog Layout (Feed + Sidebar) -->
+    <section class="section" id="articulos" style="padding-top: 10px;">
+      <div class="container">
+        <div class="blog-layout">
+
+          <!-- Column 1: Main Article Feed -->
+          <div class="blog-feed">
+            <div class="feed-header-bar">
+              <div class="feed-title-wrap">
+                <h2>Publicaciones recientes</h2>
+                <p>Ensayos, análisis bioéticos y reflexiones deontológicas de DeonTech</p>
+              </div>
+
+              <!-- Controls: Filters y Search -->
+              <div class="feed-controls">
+                <div class="filter-pills">
+                  <button class="filter-pill-btn active" data-filter="all">Todos (<span
+                      id="count-all">0</span>)</button>
+                  <button class="filter-pill-btn" data-filter="completed">Publicados (<span
+                      id="count-completed">0</span>)</button>
+                  <button class="filter-pill-btn" data-filter="in_progress">En Redacción (<span
+                      id="count-progress">0</span>)</button>
+                  <button class="filter-pill-btn" data-filter="upcoming">Próximos (<span
+                      id="count-upcoming">0</span>)</button>
+                </div>
+
+                <div class="feed-search-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                  <input type="text" id="search-input" placeholder="Buscar ensayos por tema o autor...">
+                </div>
+              </div>
+              <!-- Keywords Dropdown (Temas y Palabras Clave) -->
+              <div class="keywords-dropdown-wrapper">
+                <button type="button" id="keywords-dropdown-btn" class="keywords-dropdown-btn" aria-expanded="false" onclick="toggleKeywordsDropdown()">
+                  <div class="keywords-btn-left">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                      <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                    </svg>
+                    <span class="keywords-btn-title">Palabras Clave y Temas Éticos</span>
+                    <span id="active-keyword-badge" class="active-keyword-badge" style="display: none;"></span>
+                  </div>
+                  <div class="keywords-btn-right">
+                    <span class="keywords-toggle-text">Ver temas</span>
+                    <svg class="keywords-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </div>
+                </button>
+
+                <div id="keywords-dropdown-panel" class="keywords-dropdown-panel">
+                  <div class="keywords-panel-inner">
+                    <div class="keywords-panel-header">
+                      <span class="keywords-panel-hint">Haz clic en una palabra clave para filtrar los ensayos:</span>
+                      <button type="button" id="clear-keywords-btn" class="clear-keywords-btn" onclick="clearKeywordFilter()" style="display: none;">
+                        ✕ Quitar filtro
+                      </button>
+                    </div>
+                    <div class="tag-cloud" id="feed-tags-cloud">
+                      <!-- Rendered dynamically by app.js -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feed of Article Cards (Contenedor Desplazable a Tamaño Completo) -->
+            <div id="blog-posts-container" class="blog-posts-grid">
+              <!-- Rendered dynamically by app.js -->
+            </div>
+          </div>
+
+          <!-- Column 2: Editorial Sidebar -->
+          <aside class="blog-sidebar">
+            <!-- Widget 1: Sobre el Colectivo -->
+            <div class="sidebar-widget">
+              <div class="sidebar-widget-header">
+                <span class="sidebar-widget-title">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)"
+                    stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                  Sobre DeonTech
+                </span>
+                <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--accent-emerald);">UCSUR
+                  2026</span>
+              </div>
+              <p class="about-collective-p">
+                Somos un colectivo universitario multidisciplinario de la Universidad Científica del Sur. Articulamos el
+                software, la gestión, la economía y la agronomía hacia una praxis tecnológica humanista y sostenible.
+              </p>
+              <div class="authors-avatar-stack" id="sidebar-avatars">
+                <!-- Injected dynamically -->
+              </div>
+              <a href="#autores" class="btn btn-secondary btn-sm" style="width: 100%;">Conocer al Equipo Editorial →</a>
+            </div>
+
+            <!-- Widget 2: Píldoras Filosóficas -->
+            <div class="sidebar-widget">
+              <div class="sidebar-widget-header">
+                <span class="sidebar-widget-title">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-amber)"
+                    stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                  </svg>
+                  Pilares de Pensamiento
+                </span>
+              </div>
+              <div class="pillar-mini-list" id="sidebar-pillars">
+                <!-- Injected dynamically -->
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipo Editorial y Autores Section -->
+    <section id="autores" class="section"
+      style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Voces del Proyecto</span>
+          <h2 class="section-title">Equipo Editorial y Investigadores</h2>
+          <p class="section-desc">
+            Estudiantes de la Universidad Científica del Sur integrando la ética y la deontología desde diversas áreas
+            del conocimiento.
+          </p>
+        </div>
+
+        <div id="authors-grid" class="authors-grid">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Editorial Article Reader Modal (Lector Inmersivo de Artículos) -->
+  <div id="article-reader-modal" class="article-reader-modal" aria-hidden="true">
+    <div class="reader-container" role="dialog" aria-modal="true">
+      <!-- Toolbar -->
+      <div class="reader-toolbar">
+        <button class="reader-back-btn" onclick="closeArticleReader()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>Volver al Blog</span>
+        </button>
+
+        <div class="reader-meta-group">
+          <span id="reader-category" class="reader-category">Filosofía Práctica</span>
+          <span>•</span>
+          <span id="reader-publish-date">Septiembre 2026</span>
+        </div>
+      </div>
+
+      <!-- Article Header -->
+      <header class="reader-header">
+        <h1 id="reader-title" class="reader-title">Título del Ensayo</h1>
+        <div id="reader-lead" class="reader-lead">Extracto destacado del artículo editorial.</div>
+
+        <!-- Byline -->
+        <div class="reader-byline">
+          <div id="reader-author-avatar" class="reader-byline-avatar">DT</div>
+          <div class="reader-byline-text">
+            <span id="reader-author-name" class="reader-author-name">Equipo Editorial DeonTech</span>
+            <span id="reader-author-role" class="reader-author-inst">Universidad Científica del Sur · HUM-010</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Featured Image -->
+      <div id="reader-media-container" style="display: none;">
+        <div class="reader-hero-media">
+          <img id="reader-hero-img" src="" alt="Imagen de portada del ensayo">
+        </div>
+        <div id="reader-img-caption" class="reader-media-caption">Evidencia fotográfica y metáfora visual</div>
+      </div>
+
+      <!-- Article Navigation Tabs -->
+      <div class="reader-tabs-nav">
+        <button class="reader-tab-btn active" data-tab="tab-prose" onclick="switchReaderTab(this, 'tab-prose')">Lectura
+          del Ensayo</button>
+        <button class="reader-tab-btn" data-tab="tab-theories" onclick="switchReaderTab(this, 'tab-theories')">Marco
+          Filosófico</button>
+        <button class="reader-tab-btn" data-tab="tab-evidence" onclick="switchReaderTab(this, 'tab-evidence')">Casos y
+          Análisis</button>
+      </div>
+
+      <!-- Tab 1: Prose / Main Essay Body -->
+      <div id="tab-prose" class="reader-tab-pane active">
+        <div class="reader-body-prose">
+          <div id="reader-main-content">
+            <!-- Injected dynamically -->
+          </div>
+
+          <div id="reader-pull-quote-box" class="pull-quote">
+            <p id="reader-pull-quote">"La tecnología redefine su telos para adaptarse a la vida y no imponerse a esta."
+            </p>
+            <cite id="reader-pull-quote-cite">— Declaración de Compromiso DeonTech</cite>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: Theories y Conceptual References -->
+      <div id="tab-theories" class="reader-tab-pane">
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <h3 style="font-family: var(--font-heading); font-size: 1.3rem; color: var(--text-main);">Fundamentación
+            Filosófica y Doctrinal</h3>
+          <p style="font-size: 0.92rem; color: var(--text-muted);">
+            Cada planteamiento de este ensayo dialoga con marcos clásicos y contemporáneos de la ética de la virtud, la
+            bioética y la axiología.
+          </p>
+          <div id="reader-theories-list" style="display: flex; flex-direction: column; gap: 14px;">
+            <!-- Injected dynamically -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3: Cases, Matrices y Evidence -->
+      <div id="tab-evidence" class="reader-tab-pane">
+        <div id="reader-evidence-content">
+          <!-- Injected dynamically for AC1, AC2, AC3, etc. -->
+        </div>
+      </div>
+
+      <!-- Reader Footer -->
+      <footer class="reader-footer">
+        <div style="font-size: 0.85rem; color: var(--text-dim); font-family: var(--font-mono);">
+          DeonTech Magazine · Publicación con rigor ético
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <a id="reader-pdf-link" href="#" target="_blank" class="btn btn-secondary btn-sm"
+            title="Descargar documento PDF original">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+            </svg>
+            <span>Ver Documento Original (PDF)</span>
+          </a>
+          <button class="btn btn-primary btn-sm" onclick="closeArticleReader()">Finalizar Lectura</button>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+
+  <!-- Toast Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Magazine Footer -->
+  <footer class="magazine-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="magazine-brand" style="margin-bottom: 12px;">
+            <div class="magazine-logo-icon" style="width: 38px; height: 38px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                <polyline points="2 17 12 22 22 17" />
+                <polyline points="2 12 12 17 22 12" />
+              </svg>
+            </div>
+            <div class="magazine-name" style="font-size: 1.5rem;">DEON<span>TECH</span></div>
+          </div>
+          <p class="footer-brand-desc">
+            Revista y Blog Digital de Ética, Sociedad y Futuro Tecnológico. Una iniciativa académica y reflexiva de
+            estudiantes de la Universidad Científica del Sur comprometidos con una praxis profesional humanocéntrica.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Secciones Editoriales</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio" class="footer-link">Portada y Ensayo Destacado</a></li>
+            <li><a href="javascript:void(0)" onclick="filterByCategory('Filosofía Práctica y Telos')"
+                class="footer-link">Filosofía Moral y Virtud</a></li>
+            <li><a href="javascript:void(0)" onclick="filterByCategory('Bioética Aplicada y Inclusión')"
+                class="footer-link">Bioética y Poblaciones Vulnerables</a></li>
+            <li><a href="javascript:void(0)" onclick="filterByCategory('Axiología y Economía Ética')"
+                class="footer-link">Axiología y Jerarquía de Valores</a></li>
+            <li><a href="#autores" class="footer-link">Autores y Investigadores</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Contacto</h4>
+          <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 14px; line-height: 1.6;">
+            DeonTech es una iniciativa académica del curso HUM-010 Ética y Deontología Profesional de la Universidad Científica del Sur.
+          </p>
+          <p style="font-size: 0.82rem; color: #94a3b8; line-height: 1.5;">
+            📍 Lima, Perú<br>
+            🎓 UCSUR · Ciclo 2026-2
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 DeonTech Magazine — Universidad Científica del Sur (UCSUR)</span>
+        <span>HUM-010 Ética y Deontología Profesional · Edición 2026-2</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
